@@ -1,4 +1,3 @@
-
 #[derive(Debug)]
 enum Rgb { RED, GREEN , BLUE }
 
@@ -28,7 +27,7 @@ fn main() {
     let x  = GREEN;
     println!("Woot {:?}", x);
 
-    fn foo( x : u64) {
+    fn foo(x : u64) {
         println!("Woot : {:?}", x);
     }
 
@@ -46,6 +45,6 @@ fn main() {
         return op(x,y);
     }
 
-    println!( "{}", add( 2.0, 3.0, |a,b| a+b));
-    println!( "{}", add( 2, 3, |a,b| a + b ));
+    println!( "floats {}", add( 2.0, 3.0, |a,b| a+b));
+    println!( "ints {}", add( 2, 3, |a,b| a + b ));
 }
