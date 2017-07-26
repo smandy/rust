@@ -1,5 +1,5 @@
 #[derive(Debug)]
-enum Rgb { RED, GREEN , BLUE }
+enum Rgb { RED, GREEN, BLUE }
 
 enum Chromatic {
     MonoChrome,
@@ -40,11 +40,15 @@ fn main() {
     }
     goo(x);
 
-    fn add<T,F>(x : T, y : T, op : F) -> T
+    fn binop<T,F>(x : T, y : T, op : F) -> T
         where F : Fn(T,T) -> T {
         return op(x,y);
     }
 
-    println!( "floats {}", add( 2.0, 3.0, |a,b| a+b));
-    println!( "ints {}", add( 2, 3, |a,b| a + b ));
+    println!( "floats {}", binop( 2.0, 3.0, |a,b| a+b));
+    println!( "ints {}", binop( 2, 3, |a,b| a + b ));
+    println!( "bools or true false {}", binop( true, false, |a,b| a || b ));
+    println!( "bools and true false {}", binop( true, false, |a,b| a && b ));
+    println!( "bools or true true {}", binop( true, true, |a,b| a || b ));
+    println!( "bools and false false {}", binop( false, false, |a,b| a && b ));
 }
