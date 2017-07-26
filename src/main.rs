@@ -19,10 +19,10 @@ fn doit (s : Chromatic) {
 }
 
 fn main() {
-    doit( Colour { color : RED });
-    doit( Colour { color : GREEN });
-    doit( Colour { color : BLUE });
-    doit( MonoChrome );
+    doit(Colour { color : RED });
+    doit(Colour { color : GREEN });
+    doit(Colour { color : BLUE });
+    doit(MonoChrome);
 
     let x  = GREEN;
     println!("Woot {:?}", x);
@@ -35,7 +35,7 @@ fn main() {
 
     let x : &'static str = "foo goo bar";
 
-    fn goo( s : &str) {
+    fn goo(s : &str) {
         println!("bananarama {}", s);
     }
     goo(x);
