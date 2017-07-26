@@ -12,7 +12,7 @@ use Rgb::*;
 fn doit (s : Chromatic) {
     match s {
         MonoChrome => { println!("Monochrome"); }
-        Colour { color : RED }   => { println!("RWoot ed"); }
+        Colour { color : RED }   => { println!("Red"); }
         Colour { color : GREEN } => { println!("Green"); }
         Colour { color : BLUE }  => { println!("Blue"); }
     }
